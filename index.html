@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Slider Vue</title>
+  </head>
+  <body>
+    <!-- #app -->
+    <div id="app">
+      <!-- .container -->
+      <div class="container">
+        <!-- .slider-wrapper -->
+        <div class="slider-wrapper">
+          <div class="prev" @click="prevImages">
+            <i class="fas fa-angle-left"></i>
+          </div><!-- /.prev -->
+          <div class="images">
+            <img class="active" :src="images[counter]" alt="">
+          </div><!-- /.images -->
+          <div class="next" @click="nextImages">
+            <i class="fas fa-angle-right"></i>
+          </div><!-- /.next -->
+          <div class="nav">
+            <i class="fas fa-circle" :class="(index === counter)? 'active': '' " v-for="(image, index) in images"></i>
+          </div><!-- /.nav -->
+        </div>
+        <!-- /.slider-wrapper -->
+      </div>
+      <!-- /.container -->
+    </div>
+    <!-- /#app -->
+
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="bonus/assets/js/main.js" charset="utf-8"></script>
+  </body>
+</html>
