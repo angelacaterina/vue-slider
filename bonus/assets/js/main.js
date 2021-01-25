@@ -13,7 +13,7 @@ let app = new Vue({
     ]
   },
   created: function(){
-    setInterval(this.nextImages, 3000);
+    setInterval(this.nextImages, 5000);
   },
   methods:{
     nextImages(){

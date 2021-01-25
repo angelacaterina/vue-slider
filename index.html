@@ -21,7 +21,7 @@
           <div class="images">
             <img class="active" :src="images[counter]" alt="">
           </div><!-- /.images -->
-          <div class="next" @click="nextImages">
+          <div class="next" @click="nextImages" v-on:keyup.39="nextImages">
             <i class="fas fa-angle-right"></i>
           </div><!-- /.next -->
           <div class="nav">
